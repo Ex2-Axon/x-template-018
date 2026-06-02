@@ -1,0 +1,190 @@
+You are building a daily UI project. Below is the theme specification for today.
+
+## Theme Context (daily-context.json)
+```json
+{
+  "day": 18,
+  "date": "2026-05-30",
+  "version": "1.18.0",
+  "project_name": "x-template-018",
+  "theme": {
+    "name": "Obsidian Elegance",
+    "style": "Dark Luxury, Polished",
+    "mood": "sophisticated, opulent, serene, modern"
+  },
+  "palette": {
+    "background": "#0F1012",
+    "surface": "#1D2226",
+    "primary": "#6B8E95",
+    "accent": "#B8A98A",
+    "text": "#E0E0E0",
+    "muted": "#5C6B73"
+  },
+  "typography": {
+    "heading": "Lato",
+    "body": "Roboto",
+    "size": "medium"
+  },
+  "layout": {
+    "structure": "centered",
+    "density": "spacious",
+    "border_style": "subtle 1px line, dark metallic sheen"
+  },
+  "animation": {
+    "level": "minimal",
+    "style": "smooth fade and subtle rise"
+  },
+  "components": {
+    "hero_text": "REFINED ELEGANCE",
+    "subtitle": "Discover a world where sophistication meets modern design.",
+    "button_label": "View Portfolio",
+    "badge_text": "Exclusive"
+  },
+  "commit_message": "feat: UI Day 18 — Obsidian Elegance",
+  "source": "gemini-key1",
+  "selected_component": {
+    "category": "Cards",
+    "component": "alexruix_new-newt-64.html",
+    "path": "C:\\Users\\User\\Documents\\GitHub\\Axon\\x-components\\Cards\\alexruix_new-newt-64.html",
+    "content": "<div class=\"card\">\n  <div class=\"card-front\">\n    <p class=\"title\">John Doe</p>\n    <p class=\"subtitle\">Web Dev</p>\n  </div>\n  <div class=\"card-back\">\n    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n  </div>\n</div>\n<style>\n/* Tags: simple, gradient, card, hover, smooth, dark, about me */\n.card {\n  color: #1b1b1b;\n  width: 190px;\n  height: 254px;\n  position: relative;\n  outline: 6px solid #f5f5f5;\n  border-radius: 8px;\n  line-height: 150%;\n  padding: 16px;\n  background: #ff930f;\n  background-blend-mode: multiply;\n  background: linear-gradient(to top, #ff930f, #ffcc33);\n  transition: background-color 1s ease-in-out;\n  overflow: hidden;\n}\n\n.card-front {\n  bottom: 16px;\n  left: 0;\n  position: absolute;\n  width: 100%;\n  text-align: center;\n  transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);\n}\n\n.card-back {\n  transform: translateX(120%);\n  transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);\n}\n\n\n/*Text*/\n.title {\n  font-size: 1.3rem;\n  font-weight: bold;\n}\n/*Text divider*/\n.title::after {\n  content: \"\";\n  display: block;\n  width: 50%;\n  border-radius: 50%;\n  height: 2px;\n  margin: 2px auto;\n  background-color: #1b1b1b;\n}\n\n\n/*Hover*/\n.card:hover {\n  background-color: #1b1b1b25;\n}\n\n.card:hover .card-front {\n  transform: translateX(-100%);\n}\n\n.card:hover .card-back {\n  transform: translateX(0);\n}\n\n\n\n</style>"
+  }
+}
+```
+
+## Selected Component Reference
+- Category: Cards
+- Component: alexruix_new-newt-64.html
+- Path: C:\Users\User\Documents\GitHub\Axon\x-components\Cards\alexruix_new-newt-64.html
+
+Use the selected component HTML below as the primary design reference for the new UI. Keep the structure and styling assumptions in mind while rewriting the requested files.
+```html
+<div class="card">
+  <div class="card-front">
+    <p class="title">John Doe</p>
+    <p class="subtitle">Web Dev</p>
+  </div>
+  <div class="card-back">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+<style>
+/* Tags: simple, gradient, card, hover, smooth, dark, about me */
+.card {
+  color: #1b1b1b;
+  width: 190px;
+  height: 254px;
+  position: relative;
+  outline: 6px solid #f5f5f5;
+  border-radius: 8px;
+  line-height: 150%;
+  padding: 16px;
+  background: #ff930f;
+  background-blend-mode: multiply;
+  background: linear-gradient(to top, #ff930f, #ffcc33);
+  transition: background-color 1s ease-in-out;
+  overflow: hidden;
+}
+
+.card-front {
+  bottom: 16px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.card-back {
+  transform: translateX(120%);
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+
+/*Text*/
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+/*Text divider*/
+.title::after {
+  content: "";
+  display: block;
+  width: 50%;
+  border-radius: 50%;
+  height: 2px;
+  margin: 2px auto;
+  background-color: #1b1b1b;
+}
+
+
+/*Hover*/
+.card:hover {
+  background-color: #1b1b1b25;
+}
+
+.card:hover .card-front {
+  transform: translateX(-100%);
+}
+
+.card:hover .card-back {
+  transform: translateX(0);
+}
+
+
+
+</style>
+```
+
+## Your Task
+Completely redesign the UI by rewriting these three files from scratch:
+- `src/App.tsx`
+- `src/App.css`
+- `src/index.css`
+
+## Rules for App.tsx
+1. Keep ALL existing imports:
+   - `import { useState, useEffect, useRef } from 'react'`
+   - `import reactLogo from './assets/react.svg'`
+   - `import viteLogo from './assets/vite.svg'`
+   - `import heroImg from './assets/hero.png'`
+   - `import './App.css'`
+2. Keep the `CounterNum` component (useRef + useEffect animation)
+3. Keep the counter button with `onClick` / `setCount` handler
+4. Keep the Documentation section (Vite/React links)
+5. Keep the Social section (GitHub/Discord/X/Bluesky links + SVG icons)
+6. Do NOT use CSS custom properties (`--var-name`) in inline `style` attributes — TypeScript will error
+
+## Rules for CSS
+- Apply the palette, typography, layout structure, animation level, and component text from the JSON above
+- Use Google Fonts via `@import` in `index.css`
+- Match the theme mood: sophisticated, opulent, serene, modern
+
+## Mandatory Requirements (apply to every build)
+
+### 1. Responsive — Mobile First
+- Design for mobile (320px) first, scale up with `min-width` breakpoints
+- Touch targets minimum 44×44px
+- No horizontal scroll on any screen size
+- Fluid typography: use `clamp()` or responsive units (`rem`, `%`, `vw`)
+- Images and layout must reflow gracefully at 320px, 768px, 1280px
+
+### 2. Footer Copyright
+- The page MUST have a `<footer>` at the bottom
+- Footer text: `© 2026 Microtronic. All rights reserved.`
+- Style the footer to match the theme palette (muted text on surface background)
+
+### 3. SEO Standards
+- `index.html` must have a descriptive `<title>`: `REFINED ELEGANCE — Obsidian Elegance | Microtronic`
+- Add `<meta name="description">` with the subtitle: `Discover a world where sophistication meets modern design.`
+- Add `<meta name="keywords">` relevant to the theme
+- Add Open Graph tags: `og:title`, `og:description`, `og:type` (website)
+- All images must have meaningful `alt` attributes
+- Use semantic HTML: `<header>`, `<main>`, `<section>`, `<footer>`, `<nav>` where appropriate
+- Heading hierarchy: one `<h1>` (hero), `<h2>` for sections — no skipping levels
+
+## After saving all files
+1. Update `version` in `package.json` to `1.18.0`
+2. Update `<title>` and meta tags in `index.html` as specified above
+3. Run: `pnpm build`
+4. If build succeeds → write `done` to `scripts/build-done.flag`
+5. If build fails with TypeScript errors → fix them and rebuild
